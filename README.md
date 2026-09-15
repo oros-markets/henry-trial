@@ -1,15 +1,9 @@
-# Rhodium Work Trial
+# Rhodium Research Trial
 
-A small data-analysis workspace for exploring rhodium market, production, trade,
-and related economic datasets stored in `data/` as Parquet files.
+Start with the [trial brief](TRIAL_README.md) for the research task, evaluation requirements, and deliverable.
 
-Use one of the starter notebooks in `notebooks/` for exploration:
+- [Features catalog](FEATURES_CATALOG.md): available data, sources, and coverage.
+- [Data files](data/index.md): file locations.
+- `notebooks/exploration.ipynb` or `notebooks/exploration.py`: starting points for analysis.
 
-- `exploration.ipynb` — Jupyter notebook
-- `exploration.py` — Marimo notebook
-
-Both are provided as an option but you aren't required to use either
-
-Install the Python dependencies with `uv sync`, then open either notebook with
-`uv run jupyter lab` or `uv run marimo edit notebooks/exploration.py`.
-
+Run `uv sync`, then `uv run jupyter lab` or `uv run marimo edit notebooks/exploration.py`.

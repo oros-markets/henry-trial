@@ -15,3 +15,6 @@ dependencies = [
 
 [tool.uv]
 package = false
+
+[project.optional-dependencies]
+data-import = ["openpyxl>=3.1", "xlrd>=2.0.1"]

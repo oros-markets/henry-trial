@@ -1,0 +1,128 @@
+{
+  "sources": [
+    {
+      "file": "sources/sa_mining_1980_2002.xlsx",
+      "original_filename": "Excel table for 1980-2002.xlsx",
+      "sha256": "b29be844f6f03eb7c6a5e62d8b9e6084697f6892b9098f7ce970873299c435c2"
+    },
+    {
+      "file": "sources/sa_mining_2003_onward.xlsx",
+      "original_filename": "Excel table from 2003.xlsx",
+      "sha256": "6fe21331aeda08c41f8c54f015f6d0b012b6c64f1f152905aec71f685649f4c4"
+    },
+    {
+      "file": "sources/jm_rhodium_supply_demand_may_2026.xlsx",
+      "original_filename": "PGM supply demand history May 2026 Rhodium (2).xlsx",
+      "sha256": "84e09fe16ead78e249fbbef36b38acbb565f6fe8105d273e7422b2cac78e0279"
+    },
+    {
+      "file": "sources/russia_geopolitical_risk_index.xls",
+      "original_filename": "data_gpr_export.xls",
+      "sha256": "6ff388db4aa34eb66433d4c13c9f82d88316714889a1fc9e6a8c0ce1158d5eae"
+    },
+    {
+      "file": "sources/iea_china_ev_sales.csv",
+      "original_filename": "IEA-EV-dataHistoricalCarsChina.csv",
+      "sha256": "639c32bcf962c290f7bc2cfbe718426af53825b244fb1bbd4db4b16286fcd6eb"
+    },
+    {
+      "file": "cftc_pt_pd_open_interest.csv",
+      "original_filename": "72hh-3qpy (1).csv",
+      "sha256": "d85415212de771e48d3b1442dbe2becf93e6ea5349ab8391524d61a2f52d2c9d"
+    }
+  ],
+  "outputs": [
+    {
+      "file": "sa_mining_production_sales_monthly.parquet",
+      "rows": 23202,
+      "columns": 16,
+      "key": [
+        "period",
+        "series_id"
+      ],
+      "null_counts": {
+        "period": 0,
+        "series_id": 0,
+        "value": 0,
+        "publication_code": 0,
+        "publication_name": 0,
+        "measure": 0,
+        "mineral_group": 0,
+        "mineral_detail": 21525,
+        "adjustment": 0,
+        "unit": 0,
+        "base_period": 9786,
+        "frequency": 0,
+        "source_excel_row": 0,
+        "source_period_column": 0,
+        "source_file": 0,
+        "source_sheet": 0
+      }
+    },
+    {
+      "file": "jm_rhodium_supply_demand_annual.parquet",
+      "rows": 672,
+      "columns": 11,
+      "key": [
+        "year",
+        "section",
+        "series_name"
+      ],
+      "null_counts": {
+        "year": 0,
+        "section": 0,
+        "series_name": 0,
+        "value": 15,
+        "unit": 0,
+        "report_vintage": 0,
+        "is_report_year": 0,
+        "source_file": 0,
+        "source_sheet": 0,
+        "source_excel_row": 0,
+        "source_excel_column": 0
+      }
+    },
+    {
+      "file": "russia_geopolitical_risk_index.parquet",
+      "rows": 1520,
+      "columns": 3,
+      "key": [
+        "period"
+      ],
+      "null_counts": {
+        "period": 0,
+        "GPRC_RUS": 1020,
+        "GPRHC_RUS": 0
+      }
+    },
+    {
+      "file": "iea_china_ev_sales.parquet",
+      "rows": 197,
+      "columns": 8,
+      "key": [
+        "region",
+        "category",
+        "parameter",
+        "mode",
+        "powertrain",
+        "year",
+        "unit"
+      ],
+      "null_counts": {
+        "region": 0,
+        "category": 0,
+        "parameter": 0,
+        "mode": 0,
+        "powertrain": 0,
+        "year": 0,
+        "unit": 0,
+        "value": 0
+      }
+    },
+    {
+      "file": "cftc_pt_pd_open_interest.csv",
+      "rows": 2114,
+      "columns": 6
+    }
+  ]
+}

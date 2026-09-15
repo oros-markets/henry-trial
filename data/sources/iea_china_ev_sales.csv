@@ -1,0 +1,198 @@
+region,category,parameter,mode,powertrain,year,unit,value
+China,Historical,EV stock,Cars,BEV,2010,Vehicles,1600
+China,Historical,EV stock,Cars,PHEV,2010,Vehicles,340
+China,Historical,Oil displacement Mlge,Cars,EV,2010,Million litres gasoline equivalent,4.300000190734863
+China,Historical,EV sales,Cars,EV,2010,Vehicles,1400
+China,Historical,EV stock,Cars,EV,2010,Vehicles,1900
+China,Historical,Electricity demand,Cars,EV,2010,GWh,35
+China,Historical,"Oil displacement, Mbd",Cars,EV,2010,Million barrels per day,0.00007200000254670158
+China,Historical,EV sales share,Cars,EV,2010,percent,0.009999999776482582
+China,Historical,EV stock share,Cars,EV,2010,percent,0.003100000089034438
+China,Historical,EV sales,Cars,BEV,2010,Vehicles,1100
+China,Historical,EV sales,Cars,PHEV,2010,Vehicles,340
+China,Historical,EV sales,Cars,PHEV,2011,Vehicles,320
+China,Historical,EV sales,Cars,BEV,2011,Vehicles,4800
+China,Historical,EV stock share,Cars,EV,2011,percent,0.009100000374019146
+China,Historical,EV sales share,Cars,EV,2011,percent,0.03400000184774399
+China,Historical,"Oil displacement, Mbd",Cars,EV,2011,Million barrels per day,0.00019999999494757503
+China,Historical,Electricity demand,Cars,EV,2011,GWh,99
+China,Historical,EV stock,Cars,EV,2011,Vehicles,7000
+China,Historical,EV sales,Cars,EV,2011,Vehicles,5100
+China,Historical,Oil displacement Mlge,Cars,EV,2011,Million litres gasoline equivalent,12
+China,Historical,EV stock,Cars,PHEV,2011,Vehicles,660
+China,Historical,EV stock,Cars,BEV,2011,Vehicles,6300
+China,Historical,EV stock,Cars,BEV,2012,Vehicles,16000
+China,Historical,EV stock,Cars,PHEV,2012,Vehicles,920
+China,Historical,Oil displacement Mlge,Cars,EV,2012,Million litres gasoline equivalent,21
+China,Historical,EV sales,Cars,EV,2012,Vehicles,9900
+China,Historical,EV stock,Cars,EV,2012,Vehicles,17000
+China,Historical,Electricity demand,Cars,EV,2012,GWh,210
+China,Historical,"Oil displacement, Mbd",Cars,EV,2012,Million barrels per day,0.0003600000054575503
+China,Historical,EV sales share,Cars,EV,2012,percent,0.0729999989271164
+China,Historical,EV stock share,Cars,EV,2012,percent,0.01899999938905239
+China,Historical,EV sales,Cars,BEV,2012,Vehicles,9600
+China,Historical,EV sales,Cars,PHEV,2012,Vehicles,260
+China,Historical,EV sales,Cars,PHEV,2013,Vehicles,730
+China,Historical,EV sales,Cars,BEV,2013,Vehicles,15000
+China,Historical,EV stock share,Cars,EV,2013,percent,0.03099999949336052
+China,Historical,EV sales share,Cars,EV,2013,percent,0.09600000083446503
+China,Historical,"Oil displacement, Mbd",Cars,EV,2013,Million barrels per day,0.0006900000153109431
+China,Historical,Electricity demand,Cars,EV,2013,GWh,430
+China,Historical,EV stock,Cars,EV,2013,Vehicles,32000
+China,Historical,EV sales,Cars,EV,2013,Vehicles,16000
+China,Historical,Oil displacement Mlge,Cars,EV,2013,Million litres gasoline equivalent,41
+China,Historical,EV stock,Cars,PHEV,2013,Vehicles,1600
+China,Historical,EV stock,Cars,BEV,2013,Vehicles,31000
+China,Historical,EV stock,Cars,BEV,2014,Vehicles,60000
+China,Historical,EV stock,Cars,PHEV,2014,Vehicles,26000
+China,Historical,Oil displacement Mlge,Cars,EV,2014,Million litres gasoline equivalent,130
+China,Historical,EV sales,Cars,EV,2014,Vehicles,74000
+China,Historical,EV stock,Cars,EV,2014,Vehicles,86000
+China,Historical,Electricity demand,Cars,EV,2014,GWh,620
+China,Historical,"Oil displacement, Mbd",Cars,EV,2014,Million barrels per day,0.002099999925121665
+China,Historical,EV sales share,Cars,EV,2014,percent,0.4099999964237213
+China,Historical,EV stock share,Cars,EV,2014,percent,0.07000000029802322
+China,Historical,EV sales,Cars,BEV,2014,Vehicles,50000
+China,Historical,EV sales,Cars,PHEV,2014,Vehicles,24000
+China,Historical,EV sales,Cars,PHEV,2015,Vehicles,61000
+China,Historical,Battery deployment,Cars,EV,2015,GWh,5
+China,Historical,EV sales,Cars,BEV,2015,Vehicles,150000
+China,Historical,EV stock share,Cars,EV,2015,percent,0.20999999344348907
+China,Historical,EV sales share,Cars,EV,2015,percent,1.100000023841858
+China,Historical,"Oil displacement, Mbd",Cars,EV,2015,Million barrels per day,0.007600000128149986
+China,Historical,Electricity demand,Cars,EV,2015,GWh,1300
+China,Historical,EV stock,Cars,EV,2015,Vehicles,300000
+China,Historical,EV sales,Cars,EV,2015,Vehicles,210000
+China,Historical,Oil displacement Mlge,Cars,EV,2015,Million litres gasoline equivalent,460
+China,Historical,EV stock,Cars,PHEV,2015,Vehicles,87000
+China,Historical,EV stock,Cars,BEV,2015,Vehicles,210000
+China,Historical,EV stock,Cars,BEV,2016,Vehicles,470000
+China,Historical,EV stock,Cars,PHEV,2016,Vehicles,170000
+China,Historical,Oil displacement Mlge,Cars,EV,2016,Million litres gasoline equivalent,600
+China,Historical,EV sales,Cars,EV,2016,Vehicles,340000
+China,Historical,EV stock,Cars,EV,2016,Vehicles,630000
+China,Historical,Electricity demand,Cars,EV,2016,GWh,1400
+China,Historical,"Oil displacement, Mbd",Cars,EV,2016,Million barrels per day,0.009999999776482582
+China,Historical,EV sales share,Cars,EV,2016,percent,1.5
+China,Historical,EV stock share,Cars,EV,2016,percent,0.38999998569488525
+China,Historical,EV sales,Cars,BEV,2016,Vehicles,260000
+China,Historical,Battery deployment,Cars,EV,2016,GWh,10
+China,Historical,EV sales,Cars,PHEV,2016,Vehicles,79000
+China,Historical,EV sales,Cars,PHEV,2017,Vehicles,110000
+China,Historical,Battery deployment,Cars,EV,2017,GWh,17
+China,Historical,EV sales,Cars,BEV,2017,Vehicles,470000
+China,Historical,EV stock share,Cars,EV,2017,percent,0.6600000262260437
+China,Historical,EV sales share,Cars,EV,2017,percent,2.4000000953674316
+China,Historical,"Oil displacement, Mbd",Cars,EV,2017,Million barrels per day,0.024000000208616257
+China,Historical,Electricity demand,Cars,EV,2017,GWh,3000
+China,Historical,EV stock,Cars,EV,2017,Vehicles,1200000
+China,Historical,EV sales,Cars,EV,2017,Vehicles,580000
+China,Historical,Oil displacement Mlge,Cars,EV,2017,Million litres gasoline equivalent,1500
+China,Historical,EV stock,Cars,PHEV,2017,Vehicles,280000
+China,Historical,EV stock,Cars,BEV,2017,Vehicles,940000
+China,Historical,EV stock,Cars,BEV,2018,Vehicles,1700000
+China,Historical,EV stock,Cars,PHEV,2018,Vehicles,540000
+China,Historical,Oil displacement Mlge,Cars,EV,2018,Million litres gasoline equivalent,3000
+China,Historical,EV sales,Cars,EV,2018,Vehicles,1100000
+China,Historical,EV stock,Cars,EV,2018,Vehicles,2300000
+China,Historical,Electricity demand,Cars,EV,2018,GWh,5600
+China,Historical,"Oil displacement, Mbd",Cars,EV,2018,Million barrels per day,0.05000000074505806
+China,Historical,EV sales share,Cars,EV,2018,percent,4.699999809265137
+China,Historical,EV stock share,Cars,EV,2018,percent,1.100000023841858
+China,Historical,EV sales,Cars,BEV,2018,Vehicles,820000
+China,Historical,Battery deployment,Cars,EV,2018,GWh,36
+China,Historical,EV sales,Cars,PHEV,2018,Vehicles,270000
+China,Historical,EV sales,Cars,PHEV,2019,Vehicles,230000
+China,Historical,Battery deployment,Cars,EV,2019,GWh,45
+China,Historical,EV sales,Cars,BEV,2019,Vehicles,840000
+China,Historical,EV stock share,Cars,EV,2019,percent,1.5
+China,Historical,EV sales share,Cars,EV,2019,percent,5
+China,Historical,"Oil displacement, Mbd",Cars,EV,2019,Million barrels per day,0.06499999761581421
+China,Historical,Electricity demand,Cars,EV,2019,GWh,7300
+China,Historical,EV stock,Cars,EV,2019,Vehicles,3300000
+China,Historical,EV sales,Cars,EV,2019,Vehicles,1100000
+China,Historical,Oil displacement Mlge,Cars,EV,2019,Million litres gasoline equivalent,3900
+China,Historical,EV stock,Cars,PHEV,2019,Vehicles,760000
+China,Historical,EV stock,Cars,BEV,2019,Vehicles,2600000
+China,Historical,EV stock,Cars,BEV,2020,Vehicles,3500000
+China,Historical,EV stock,Cars,PHEV,2020,Vehicles,970000
+China,Historical,Oil displacement Mlge,Cars,EV,2020,Million litres gasoline equivalent,4700
+China,Historical,EV sales,Cars,EV,2020,Vehicles,1100000
+China,Historical,EV stock,Cars,EV,2020,Vehicles,4400000
+China,Historical,Electricity demand,Cars,EV,2020,GWh,8600
+China,Historical,"Oil displacement, Mbd",Cars,EV,2020,Million barrels per day,0.07900000363588333
+China,Historical,EV sales share,Cars,EV,2020,percent,5.699999809265137
+China,Historical,EV stock share,Cars,EV,2020,percent,1.7999999523162842
+China,Historical,EV sales,Cars,BEV,2020,Vehicles,930000
+China,Historical,Battery deployment,Cars,EV,2020,GWh,50
+China,Historical,EV sales,Cars,PHEV,2020,Vehicles,220000
+China,Historical,EV sales,Cars,PHEV,2021,Vehicles,550000
+China,Historical,Battery deployment,Cars,EV,2021,GWh,140
+China,Historical,EV stock,Cars,FCEV,2021,Vehicles,19
+China,Historical,EV sales,Cars,FCEV,2021,Vehicles,19
+China,Historical,EV sales,Cars,BEV,2021,Vehicles,2700000
+China,Historical,EV stock share,Cars,EV,2021,percent,2.9000000953674316
+China,Historical,EV sales share,Cars,EV,2021,percent,16
+China,Historical,"Oil displacement, Mbd",Cars,EV,2021,Million barrels per day,0.15000000596046448
+China,Historical,Electricity demand,Cars,EV,2021,GWh,16000
+China,Historical,EV stock,Cars,EV,2021,Vehicles,7700000
+China,Historical,EV sales,Cars,EV,2021,Vehicles,3300000
+China,Historical,Oil displacement Mlge,Cars,EV,2021,Million litres gasoline equivalent,9000
+China,Historical,EV stock,Cars,PHEV,2021,Vehicles,1500000
+China,Historical,EV stock,Cars,BEV,2021,Vehicles,6200000
+China,Historical,EV stock,Cars,BEV,2022,Vehicles,10000000
+China,Historical,EV stock,Cars,PHEV,2022,Vehicles,3000000
+China,Historical,Oil displacement Mlge,Cars,EV,2022,Million litres gasoline equivalent,14000
+China,Historical,EV sales,Cars,EV,2022,Vehicles,6000000
+China,Historical,EV stock,Cars,EV,2022,Vehicles,13000000
+China,Historical,Electricity demand,Cars,EV,2022,GWh,24000
+China,Historical,"Oil displacement, Mbd",Cars,EV,2022,Million barrels per day,0.23999999463558197
+China,Historical,EV sales share,Cars,EV,2022,percent,29
+China,Historical,EV stock share,Cars,EV,2022,percent,4.800000190734863
+China,Historical,EV sales,Cars,BEV,2022,Vehicles,4500000
+China,Historical,EV sales,Cars,FCEV,2022,Vehicles,240
+China,Historical,EV stock,Cars,FCEV,2022,Vehicles,240
+China,Historical,Battery deployment,Cars,EV,2022,GWh,270
+China,Historical,EV sales,Cars,PHEV,2022,Vehicles,1500000
+China,Historical,EV sales,Cars,PHEV,2023,Vehicles,2700000
+China,Historical,Battery deployment,Cars,EV,2023,GWh,370
+China,Historical,EV stock,Cars,FCEV,2023,Vehicles,760
+China,Historical,EV sales,Cars,FCEV,2023,Vehicles,520
+China,Historical,EV sales,Cars,BEV,2023,Vehicles,5500000
+China,Historical,EV stock share,Cars,EV,2023,percent,7.199999809265137
+China,Historical,EV sales share,Cars,EV,2023,percent,38
+China,Historical,"Oil displacement, Mbd",Cars,EV,2023,Million barrels per day,0.3700000047683716
+China,Historical,Electricity demand,Cars,EV,2023,GWh,38000
+China,Historical,EV stock,Cars,EV,2023,Vehicles,21000000
+China,Historical,EV sales,Cars,EV,2023,Vehicles,8100000
+China,Historical,Oil displacement Mlge,Cars,EV,2023,Million litres gasoline equivalent,22000
+China,Historical,EV stock,Cars,PHEV,2023,Vehicles,5500000
+China,Historical,EV stock,Cars,BEV,2023,Vehicles,16000000
+China,Historical,EV stock,Cars,BEV,2024,Vehicles,22000000
+China,Historical,EV stock,Cars,PHEV,2024,Vehicles,10000000
+China,Historical,Oil displacement Mlge,Cars,EV,2024,Million litres gasoline equivalent,31000
+China,Historical,EV sales,Cars,EV,2024,Vehicles,11000000
+China,Historical,EV stock,Cars,EV,2024,Vehicles,32000000
+China,Historical,Electricity demand,Cars,EV,2024,GWh,54000
+China,Historical,"Oil displacement, Mbd",Cars,EV,2024,Million barrels per day,0.5199999809265137
+China,Historical,EV sales share,Cars,EV,2024,percent,48
+China,Historical,EV stock share,Cars,EV,2024,percent,10
+China,Historical,EV sales,Cars,BEV,2024,Vehicles,6400000
+China,Historical,EV sales,Cars,FCEV,2024,Vehicles,62
+China,Historical,EV stock,Cars,FCEV,2024,Vehicles,820
+China,Historical,Battery deployment,Cars,EV,2024,GWh,490
+China,Historical,EV sales,Cars,PHEV,2024,Vehicles,4900000
+China,Historical,EV sales,Cars,PHEV,2025,Vehicles,5100000
+China,Historical,Battery deployment,Cars,EV,2025,GWh,590
+China,Historical,EV stock,Cars,FCEV,2025,Vehicles,840
+China,Historical,EV sales,Cars,FCEV,2025,Vehicles,5
+China,Historical,EV sales,Cars,BEV,2025,Vehicles,8200000
+China,Historical,EV stock share,Cars,EV,2025,percent,14
+China,Historical,EV sales share,Cars,EV,2025,percent,53
+China,Historical,"Oil displacement, Mbd",Cars,EV,2025,Million barrels per day,0.6499999761581421
+China,Historical,Electricity demand,Cars,EV,2025,GWh,68000
+China,Historical,EV stock,Cars,EV,2025,Vehicles,44000000
+China,Historical,EV sales,Cars,EV,2025,Vehicles,13000000
+China,Historical,Oil displacement Mlge,Cars,EV,2025,Million litres gasoline equivalent,39000
+China,Historical,EV stock,Cars,PHEV,2025,Vehicles,15000000
+China,Historical,EV stock,Cars,BEV,2025,Vehicles,29000000
