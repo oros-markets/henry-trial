@@ -1,6 +1,6 @@
 # Quantitative Research Work Trial: Rhodium Pricing
 
-Develop the strongest model you can for rhodium price returns, with corresponding price forecasts in US dollars per troy ounce (USD/troy oz), using the supplied data as your starting point.
+Develop a predictive model you can for rhodium price returns, with corresponding price forecasts in US dollars per troy ounce (USD/troy oz), using the supplied data as your starting point. You only need to build a forecasting model; a trading strategy is not required.
 
 The target is the **Johnson Matthey New York daily rhodium Base Price**, using the supplied history from **16 September 1996 onward** in [jm_pgm_prices_daily.parquet](data/jm_pgm_prices_daily.parquet). Predict returns and report corresponding price forecasts in **USD/troy oz**.
 
@@ -8,7 +8,7 @@ Use `rhodium_usd_per_troy_oz` as the target price. The same table provides daily
 
 This is a deliberately open-ended research problem. You own the work from feature selection onward, including problem formulation, feature engineering, modeling, validation, and interpretation. Focus primarily on horizons of roughly 6–12 months. You may experiment with other horizons, but every prediction horizon must be at least 3 months. Define and justify your horizons, forecast frequency, and the information available at the time each prediction is made.
 
-We are interested in both predictive performance and the quality of your research judgment. This is a difficult problem. Strong work explains what worked, what did not, and why.
+We are interested in both predictive performance and the quality of your research judgment. This is a difficult problem, so we're more interested in your thought process! Be sure to keep justifications for choices and methodology.
 
 ## Data
 
@@ -25,7 +25,7 @@ Install dependencies with `uv sync`, then open a notebook with `uv run jupyter l
 
 ## Research approach and evaluation
 
-Choose the methods you believe are appropriate and explain your reasoning. There is no prescribed model family, feature set, or backtesting scheme. Creativity is welcome when supported by a clear hypothesis and credible evaluation.
+Choose the methods you believe are appropriate and explain your reasoning. There is no prescribed model family, feature set, or backtesting schema. Creativity is welcome when supported by a clear hypothesis and credible evaluation.
 
 Evaluate forecasts of the change in rhodium's price over each horizon. Use simple cumulative returns:
 
@@ -33,15 +33,13 @@ Evaluate forecasts of the change in rhodium's price over each horizon. Use simpl
 
 You may model log returns or price levels internally, but convert predictions to this basis for comparison. Explain how calendar horizons map to observed price dates.
 
-Report out-of-sample results separately for each horizon, including:
+Report out-of-sample results separately for each horizon, including (you're not limited to this):
 
-- R² on rhodium price returns. State the definition and how results are aggregated across backtest folds.
+- R² on rhodium price returns.
 - MAE of the corresponding price forecasts in USD/troy oz.
 - RMSE of price forecasts, plus MAE and RMSE of returns. Label return errors clearly as decimal returns or percentage points.
 
-Explain which objective guided model selection and how you weighed competing metrics. Compare with a zero-return forecast, equivalent to predicting that the future price equals the most recently available price, and any other useful baselines. “Returns” here means changes in the price of rhodium; a trading strategy is not required.
-
-Choose and justify a backtesting scheme appropriate for time-dependent data. Document the training and evaluation periods, retraining schedule, and model-selection process. At each training cutoff, use only examples whose forward-return outcomes would already have been observed. Account for overlapping forecast horizons when designing splits and interpreting results. Clearly distinguish results used to guide development from any final held-out evaluation.
+Explain which objective guided model selection and how you weighed competing metrics. Choose and justify a backtesting schema appropriate for time-dependent data. Document the training and evaluation periods, retraining schedule, and model-selection process. Clearly distinguish results used to guide development from any final evaluation.
 
 ## Additional data
 
