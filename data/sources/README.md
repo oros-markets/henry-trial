@@ -41,19 +41,20 @@ uv run python scripts/prepare_target.py
 
 [pgm_alternative_quotes_daily.parquet](../pgm_alternative_quotes_daily.parquet) contains Heraeus Precious Metals quotes for platinum, palladium, rhodium, iridium, and ruthenium. Heraeus and Johnson Matthey are separate dealers with different price discovery. The Heraeus dataset is retained for its additional open, high, low, and close (OHLC) fields, particularly for platinum and palladium. The recorded price-history endpoint is preserved in the Parquet metadata. Currency is recorded as USD; the weight unit is not specified in that metadata.
 
-## Crucible futures
+## Crucible market data
 
-The local futures files were retrieved from Crucible’s `market_resampled_bars` dataset on 15 September 2026. The source is CME Group via Databento. The [manifest](crucible_futures_manifest.json) records the exact series IDs, source handles, units, checksums, coverage, and longer gaps.
+These files were retrieved through Crucible on 15 September 2026. Exact dataset IDs, snapshots, units, and checksums are in the [metals manifest](crucible_futures_manifest.json) and [energy/FX manifest](crucible_energy_fx_manifest.json).
 
-| File | Contract | Rows | Available dates | Price unit |
-| --- | --- | --- | --- | --- |
-| [aluminum_futures_daily.parquet](../aluminum_futures_daily.parquet) | COMEX aluminum, ALI, front continuous | 1,306 | 2014-05-06 to 2026-06-19 | USD/metric tonne |
-| [copper_futures_daily.parquet](../copper_futures_daily.parquet) | COMEX copper, HG, front continuous | 4,502 | 2010-06-07 to 2026-06-28 | USD/lb |
+| File | Source | Contents |
+| --- | --- | --- |
+| [aluminum_futures_daily.parquet](../aluminum_futures_daily.parquet) | CME / Databento | ALI front continuous contract; OHLC in USD/metric tonne and volume in contracts. |
+| [copper_futures_daily.parquet](../copper_futures_daily.parquet) | CME / Databento | HG front continuous contract; OHLC in USD/lb and volume in contracts. |
+| [wti_futures_curve_daily.parquet](../wti_futures_curve_daily.parquet) | CME / Databento | CL continuous contract ranks 1–12; OHLC in USD/barrel and volume in contracts. |
+| [brent_futures_curve_daily.parquet](../brent_futures_curve_daily.parquet) | CME / Databento | BZ Brent Last Day Financial ranks 1–12; OHLC in USD/barrel and volume in contracts. |
+| [usd_cny_exchange_rate_daily.parquet](../usd_cny_exchange_rate_daily.parquet) | FRED / DEXCHUS | `value` is yuan per US dollar; `vintage` identifies the source snapshot. |
 
-Each row contains `observation_date`, UTC `bar_start_time` and `bar_end_time`, `open`, `high`, `low`, `close`, and `volume`, plus source and revision fields. Volume is in contracts. Prices retain the source units. These are daily OHLCV bars, not official settlements. The continuous series use unadjusted days-before-expiry rolls; the source does not supply the exact roll-day count. Contract changes can create price jumps.
+For oil curves, one row is a `price_date` and `contract_rank`; rank 1 is the front contract, followed by successive contract positions. `contract_symbol` identifies a rolling series rather than a fixed delivery month. Futures prices are unadjusted OHLCV observations, not official settlements. Metals bars use UTC timestamps; use `bar_end_time` for completed-bar availability. Revision and vintage fields describe source snapshots, not historical release times.
 
-`observation_date` is the UTC bar-start date. A completed bar is available no earlier than `bar_end_time`. `revision_observed_at` records a Crucible revision timestamp, not the original market publication time. No dates or prices have been interpolated. Aluminum is sparse, with a largest interval between observations of 672 calendar days; copper’s largest interval is five days. The source’s `completeness_state` describes individual bars, not completeness of the history.
+Some observations are missing and coverage varies by rank; the files preserve those gaps. Detailed counts remain in the manifests.
 
-Both files have unique dates, non-null OHLCV fields, nonnegative volume, and consistent OHLC ranges. All returned observations were retained and checked after saving. The extraction queried 2010 onward; dates above describe the returned records. The source snapshots stop in June 2026.
-
-Contract references: [CME aluminum](https://www.cmegroup.com/markets/metals/base/aluminum.contractSpecs.html) and [CME copper](https://www.cmegroup.com/markets/metals/base/copper.html).
+Source references: [CME aluminum](https://www.cmegroup.com/markets/metals/base/aluminum.contractSpecs.html), [CME copper](https://www.cmegroup.com/markets/metals/base/copper.html), [CME WTI](https://www.cmegroup.com/markets/energy/crude-oil/light-sweet-crude.contractSpecs.html), [CME Brent](https://www.cmegroup.com/markets/energy/crude-oil/brent-crude-oil-last-day.contractSpecs.html), and [FRED DEXCHUS](https://fred.stlouisfed.org/series/DEXCHUS).

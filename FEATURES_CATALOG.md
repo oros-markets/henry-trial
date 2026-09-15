@@ -14,8 +14,11 @@ Coverage lists the first and last observations. Individual series may start late
 | --- | --- | --- | --- |
 | [Johnson Matthey PGM prices](data/jm_pgm_prices_daily.parquet) | Daily quotes | 1996-09-16 to 2026-09-15 | New York prices for rhodium, platinum, palladium, iridium, and ruthenium, all in USD/troy oz. Rhodium is the target. |
 | [Heraeus PGM prices](data/pgm_alternative_quotes_daily.parquet) | Daily | 2018-01-01 to 2026-09-10 | Heraeus Precious Metals dealer quotes for the same five metals. Retained for additional open, high, low, and close (OHLC) data, particularly for platinum and palladium; dealer price discovery differs from Johnson Matthey. |
-| [Aluminum futures](data/aluminum_futures_daily.parquet) | Daily bars; sparse | 2014-05-06 to 2026-06-19 | COMEX aluminum (ALI), continuous front contract. Open, high, low, close in USD/metric tonne, plus volume. Source: CME / Databento via Crucible. |
+| [Aluminum futures](data/aluminum_futures_daily.parquet) | Daily bars | 2014-05-06 to 2026-06-19 | COMEX aluminum (ALI), continuous front contract. Open, high, low, close in USD/metric tonne, plus volume. Source: CME / Databento via Crucible. |
 | [Copper futures](data/copper_futures_daily.parquet) | Daily bars | 2010-06-07 to 2026-06-28 | COMEX copper (HG), continuous front contract. Open, high, low, close in USD/lb, plus volume. Source: CME / Databento via Crucible. |
+| [WTI futures curve](data/wti_futures_curve_daily.parquet) | Daily by contract rank | 2010-06-07 to 2026-06-28 | NYMEX WTI crude oil (CL), ranks 1–12, with OHLC prices in USD/barrel and volume. Source: CME / Databento via Crucible. |
+| [Brent futures curve](data/brent_futures_curve_daily.parquet) | Daily by contract rank | 2010-06-07 to 2026-06-28 | NYMEX Brent Last Day Financial (BZ), ranks 1–12, with OHLC prices in USD/barrel and volume. Source: CME / Databento via Crucible. |
+| [Yuan / US dollar](data/usd_cny_exchange_rate_daily.parquet) | Weekdays | 1981-01-02 to 2026-07-24 | Chinese yuan per US dollar, with source vintage. An increase means a weaker yuan. Source: FRED / DEXCHUS via Crucible. |
 | [China vehicle production](data/china_vehicle_production_monthly.parquet) | Monthly | 1995-02 to 2026-07 | Total motor vehicles produced in China. Source: ChinaData. |
 | [China new-energy vehicle production](data/china_new_energy_vehicle_production_monthly.parquet) | Monthly | 2023-03 to 2026-07 | Vehicles produced in the source’s new-energy category. Source: ChinaData / NBS. |
 | [South African total mining](data/sa_total_mining_production_monthly.parquet) | Monthly | 1975-01 to 2023-10 | Total mining output index, 2015 = 100, without seasonal adjustment. Source: FRED / OECD. |
@@ -29,9 +32,6 @@ Coverage lists the first and last observations. Individual series may start late
 | [Russia geopolitical risk](data/russia_geopolitical_risk_index.parquet) | Monthly | 1900-01 to 2026-08 | Share of newspaper articles about geopolitical risk involving Russia. The recent measure starts in 1985. Source: GPR workbook. |
 | [China electric cars](data/iea_china_ev_sales.parquet) | Annual | 2010 to 2025 | Electric-car sales, fleet size, shares, battery deployment, electricity use, and estimated oil displacement. Source: IEA. |
 
-## Timing notes
+## Usage notes
 
-- JM quotes have longer gaps in January 2003, 2016, and 2017. They are not interpolated; use observed dates when mapping forecast horizons.
-- The 2026 annual supply/demand figures are a May 2026 outlook. Account for publication timing and revisions when aligning features to forecasts.
-- Export unit values use net weight, except July 2021 and February 2026, which use reported alternate kilogram quantities; `unit_value_weight_basis` identifies these rows.
-- Futures bars use UTC dates and unadjusted contract rolls; the close is not an official settlement. Use `bar_end_time` when deciding when a completed bar was available. Aluminum has substantial gaps (up to 672 calendar days); missing dates are not filled. [Source details](data/sources/README.md#crucible-futures).
+Some dates and curve ranks are missing; source values are retained without filling. Futures closes are unadjusted OHLCV prices, and contract rolls can affect changes. The 2026 supply/demand figures are a May outlook. See [source notes](data/sources/README.md) for field and timing conventions.

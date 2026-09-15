@@ -1,0 +1,214 @@
+{
+  "source": "Crucible Research SDK; named source snapshots",
+  "files": [
+    {
+      "file": "wti_futures_curve_daily.parquet",
+      "dataset_id": "bds_034ae12127e04a8e9bffe431644ae7ea",
+      "dataset_version": "2026-08-07-cme-databento-12m-curves-v1",
+      "snapshot_id": "c5b7db79cb9ea364c171e9dd9867600e016efd56ae8e48fa7d473315c4ad34f9",
+      "retrieved_at_utc": "2026-09-15T21:28:27.698005+00:00",
+      "source_url": "https://www.cmegroup.com/markets/energy/crude-oil/light-sweet-crude.contractSpecs.html",
+      "rows": 56725,
+      "first_date": "2010-06-07",
+      "last_date": "2026-06-28",
+      "price_unit": "USD/barrel",
+      "key_columns": [
+        "price_date",
+        "contract_rank"
+      ],
+      "null_values": 0,
+      "processing": "Source observations retained without interpolation or price adjustment.",
+      "contract_ranks": [
+        {
+          "contract_rank": 1,
+          "first_date": "2010-06-07",
+          "last_date": "2026-06-28",
+          "rows": 4985
+        },
+        {
+          "contract_rank": 2,
+          "first_date": "2010-06-07",
+          "last_date": "2026-06-28",
+          "rows": 4985
+        },
+        {
+          "contract_rank": 3,
+          "first_date": "2010-06-07",
+          "last_date": "2026-06-28",
+          "rows": 4982
+        },
+        {
+          "contract_rank": 4,
+          "first_date": "2010-06-07",
+          "last_date": "2026-06-28",
+          "rows": 4970
+        },
+        {
+          "contract_rank": 5,
+          "first_date": "2010-06-07",
+          "last_date": "2026-06-28",
+          "rows": 4914
+        },
+        {
+          "contract_rank": 6,
+          "first_date": "2010-06-07",
+          "last_date": "2026-06-28",
+          "rows": 4827
+        },
+        {
+          "contract_rank": 7,
+          "first_date": "2010-06-07",
+          "last_date": "2026-06-28",
+          "rows": 4698
+        },
+        {
+          "contract_rank": 8,
+          "first_date": "2010-06-07",
+          "last_date": "2026-06-28",
+          "rows": 4632
+        },
+        {
+          "contract_rank": 9,
+          "first_date": "2010-06-07",
+          "last_date": "2026-06-26",
+          "rows": 4536
+        },
+        {
+          "contract_rank": 10,
+          "first_date": "2010-06-07",
+          "last_date": "2026-06-28",
+          "rows": 4504
+        },
+        {
+          "contract_rank": 11,
+          "first_date": "2010-06-07",
+          "last_date": "2026-06-28",
+          "rows": 4465
+        },
+        {
+          "contract_rank": 12,
+          "first_date": "2010-06-07",
+          "last_date": "2026-06-26",
+          "rows": 4227
+        }
+      ],
+      "measurement": "Unadjusted continuous futures OHLCV, not official settlement; contract_rank is relative position, not a fixed maturity.",
+      "sha256": "f200ce82dfc9f6a0b5ad35db5951d201fff1b3f921866bac5afe71e848dff52f"
+    },
+    {
+      "file": "brent_futures_curve_daily.parquet",
+      "dataset_id": "bds_03bac8c5455f4e69ad3f2fee875f7bf3",
+      "dataset_version": "2026-08-07-cme-databento-12m-curves-v1",
+      "snapshot_id": "cc17749244e7942c6a00ae232f93b13ea0f06dc4cd27697a412163f30693e835",
+      "retrieved_at_utc": "2026-09-15T21:28:27.723260+00:00",
+      "source_url": "https://www.cmegroup.com/markets/energy/crude-oil/brent-crude-oil-last-day.contractSpecs.html",
+      "rows": 38287,
+      "first_date": "2010-06-07",
+      "last_date": "2026-06-28",
+      "price_unit": "USD/barrel",
+      "key_columns": [
+        "price_date",
+        "contract_rank"
+      ],
+      "null_values": 0,
+      "processing": "Source observations retained without interpolation or price adjustment.",
+      "contract_ranks": [
+        {
+          "contract_rank": 1,
+          "first_date": "2010-06-07",
+          "last_date": "2026-06-28",
+          "rows": 4817
+        },
+        {
+          "contract_rank": 2,
+          "first_date": "2010-06-07",
+          "last_date": "2026-06-28",
+          "rows": 4676
+        },
+        {
+          "contract_rank": 3,
+          "first_date": "2010-06-09",
+          "last_date": "2026-06-28",
+          "rows": 4409
+        },
+        {
+          "contract_rank": 4,
+          "first_date": "2010-06-10",
+          "last_date": "2026-06-28",
+          "rows": 4126
+        },
+        {
+          "contract_rank": 5,
+          "first_date": "2010-06-11",
+          "last_date": "2026-06-28",
+          "rows": 3767
+        },
+        {
+          "contract_rank": 6,
+          "first_date": "2010-07-29",
+          "last_date": "2026-06-26",
+          "rows": 3354
+        },
+        {
+          "contract_rank": 7,
+          "first_date": "2010-06-30",
+          "last_date": "2026-06-25",
+          "rows": 2973
+        },
+        {
+          "contract_rank": 8,
+          "first_date": "2010-06-30",
+          "last_date": "2026-06-25",
+          "rows": 2645
+        },
+        {
+          "contract_rank": 9,
+          "first_date": "2010-08-13",
+          "last_date": "2026-05-22",
+          "rows": 2315
+        },
+        {
+          "contract_rank": 10,
+          "first_date": "2010-07-29",
+          "last_date": "2026-06-26",
+          "rows": 2101
+        },
+        {
+          "contract_rank": 11,
+          "first_date": "2010-08-03",
+          "last_date": "2026-06-25",
+          "rows": 1823
+        },
+        {
+          "contract_rank": 12,
+          "first_date": "2010-08-26",
+          "last_date": "2022-05-26",
+          "rows": 1281
+        }
+      ],
+      "measurement": "Unadjusted continuous futures OHLCV, not official settlement; contract_rank is relative position, not a fixed maturity.",
+      "sha256": "c0750dc783661597907b56b801f096f73f1b43069a09d148ab53a0c35d4879ea"
+    },
+    {
+      "file": "usd_cny_exchange_rate_daily.parquet",
+      "dataset_id": "bds_6a8477af19d74eca9ef3f277d04d9f1b",
+      "dataset_version": "2026-08-03-dexchus-v1",
+      "snapshot_id": "03cb92af00770f7cd7c6c801d364329c3011fd91a5ba0286b46fd366f9cf65df",
+      "retrieved_at_utc": "2026-09-15T21:28:27.618171+00:00",
+      "source_url": "https://fred.stlouisfed.org/series/DEXCHUS",
+      "rows": 11886,
+      "first_date": "1981-01-02",
+      "last_date": "2026-07-24",
+      "price_unit": "CNY per USD",
+      "key_columns": [
+        "observation_date"
+      ],
+      "null_values": 514,
+      "processing": "Source observations retained without interpolation or price adjustment.",
+      "vintage": [
+        "2026-07-27..2026-07-27"
+      ],
+      "sha256": "8167fe7401a10f1a70f5ba543cc6a7db4c05bebeb79596c0c3338768aa5b35f4"
+    }
+  ]
+}

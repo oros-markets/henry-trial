@@ -8,6 +8,9 @@ See the [features catalog](../FEATURES_CATALOG.md) for coverage, frequency, and 
 | [pgm_alternative_quotes_daily.parquet](pgm_alternative_quotes_daily.parquet) | Heraeus Precious Metals PGM prices and OHLC |
 | [aluminum_futures_daily.parquet](aluminum_futures_daily.parquet) | COMEX aluminum futures: daily OHLCV |
 | [copper_futures_daily.parquet](copper_futures_daily.parquet) | COMEX copper futures: daily OHLCV |
+| [wti_futures_curve_daily.parquet](wti_futures_curve_daily.parquet) | WTI crude oil futures: daily OHLCV, ranks 1–12 |
+| [brent_futures_curve_daily.parquet](brent_futures_curve_daily.parquet) | Brent crude oil futures: daily OHLCV, ranks 1–12 |
+| [usd_cny_exchange_rate_daily.parquet](usd_cny_exchange_rate_daily.parquet) | Chinese yuan per US dollar |
 | [china_vehicle_production_monthly.parquet](china_vehicle_production_monthly.parquet) | China vehicle production |
 | [china_new_energy_vehicle_production_monthly.parquet](china_new_energy_vehicle_production_monthly.parquet) | China new-energy vehicle production |
 | [sa_total_mining_production_monthly.parquet](sa_total_mining_production_monthly.parquet) | South African total mining |
