@@ -21,13 +21,13 @@ From the repository root:
 uv run --extra data-import python scripts/import_trial_attachments.py
 ```
 
-The import uses the preserved attachments, requires no network data access, and does not modify the eight `bds_*` files. It checks source-series metadata compatibility, unique keys, source row counts, continuous monthly coverage, annual supply/demand identities, and Parquet round-trip equality. It retains missing values and does not fill absent series history.
+The import uses the preserved attachments, requires no network data access, and does not modify the separately supplied monthly and daily datasets. It checks source-series metadata compatibility, unique keys, source row counts, continuous monthly coverage, annual supply/demand identities, and Parquet round-trip equality. It retains missing values and does not fill absent series history.
 
 See the [Features Catalog](../../FEATURES_CATALOG.md) for dataset descriptions.
 
 ## Daily rhodium target and trade records
 
-`jm_rhodium_new_york_daily.csv` is the unmodified Johnson Matthey New York export downloaded on 15 September 2026. It contains five metals; the target selects every rhodium observation, from 16 September 1996 to 15 September 2026. Prices are USD per troy ounce. No start-date filter or interpolation is applied. See [source provenance](target_provenance.json).
+`jm_pgm_new_york_daily.csv` is the unmodified Johnson Matthey New York export downloaded on 15 September 2026. It contains five metals; the research table retains every observation for all five metals, with rhodium as the prediction target, from 16 September 1996 to 15 September 2026. Prices are USD per troy ounce. No start-date filter or interpolation is applied. See [source provenance](target_provenance.json).
 
 `un_comtrade_original.parquet` preserves the supplied trade data before restoring two unit values. `comtrade_202107.json` and `comtrade_202602.json` contain the source responses with alternate quantities in kilograms (unit code 8). The original net weights remain unchanged. `comtrade_202012.json` records an empty response for December 2020.
 

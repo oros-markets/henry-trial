@@ -5,7 +5,6 @@
   "source_page": "https://matthey.com/en/products-and-markets/pgms-and-circularity/pgm-management",
   "raw_start": "1996-09-16",
   "raw_unit": "USD/troy ounce",
-  "usd_per_lb_multiplier": "7000/480",
   "comtrade_endpoint": "https://comtradeapi.un.org/public/v1/preview/C/M/HS",
   "comtrade_parameters": {
     "reporterCode": 710,
@@ -20,8 +19,15 @@
   "quantity_units_reference": "https://uncomtrade.org/docs/supplementary-quantity-units/",
   "raw_end": "2026-09-15",
   "original_filename": "DAILY_PGM_Prices_New York_9_15_2026.csv",
-  "source_file": "jm_rhodium_new_york_daily.csv",
+  "source_file": "jm_pgm_new_york_daily.csv",
   "sha256": "42746e48e80953a5a9fb240f0f0c0acee6eb528bc1ec16e5a50d17eae3546af7",
   "acquisition": "User-downloaded Johnson Matthey website export",
-  "target_selection": "All Rhodium observations; no date filtering or interpolation"
+  "target_selection": "All five metal columns and all quoted dates; rhodium is the prediction target. No unit conversion, date filtering, or interpolation.",
+  "price_columns": {
+    "platinum": "platinum_usd_per_troy_oz",
+    "palladium": "palladium_usd_per_troy_oz",
+    "rhodium": "rhodium_usd_per_troy_oz",
+    "iridium": "iridium_usd_per_troy_oz",
+    "ruthenium": "ruthenium_usd_per_troy_oz"
+  }
 }

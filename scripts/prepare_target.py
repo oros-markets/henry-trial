@@ -6,15 +6,16 @@ import pyarrow as pa
 import pyarrow.parquet as pq
 ROOT = Path(__file__).resolve().parents[1]
 SOURCES = ROOT / "data/sources"
-prices = pd.read_csv(SOURCES / "jm_rhodium_new_york_daily.csv", skiprows=1)
+prices = pd.read_csv(SOURCES / "jm_pgm_new_york_daily.csv", skiprows=1)
 prices["observation_date"] = pd.to_datetime(prices.Date, format="%d-%b-%Y")
 prices = prices.sort_values("observation_date")
-target = prices[["observation_date", "Rhodium"]].rename(columns={"Rhodium": "price_usd_per_troy_oz"}).reset_index(drop=True)
-target["price_usd_per_lb"] = target.price_usd_per_troy_oz * (7000 / 480)
+metals = ["Platinum", "Palladium", "Rhodium", "Iridium", "Ruthenium"]
+price_columns = {metal: f"{metal.lower()}_usd_per_troy_oz" for metal in metals}
+target = prices[["observation_date", *metals]].rename(columns=price_columns).reset_index(drop=True)
 target["quote_region"] = "New York"
 assert target.observation_date.is_unique and target.notna().all().all()
-assert target.price_usd_per_troy_oz.gt(0).all()
-target.to_parquet(ROOT / "data/johnson_matthey_rhodium_daily.parquet", index=False)
+assert target[list(price_columns.values())].gt(0).all().all()
+target.to_parquet(ROOT / "data/jm_pgm_prices_daily.parquet", index=False)
 original = pq.read_table(SOURCES / "un_comtrade_original.parquet")
 trade = original.to_pandas()
 trade["alternate_quantity_kg"] = float("nan")
@@ -37,5 +38,5 @@ out = pa.Table.from_pandas(trade, preserve_index=False)
 metadata = dict(original.schema.metadata or {})
 metadata.update(out.schema.metadata or {})
 out = out.replace_schema_metadata(metadata)
-pq.write_table(out, next((ROOT / "data").glob("*un_comtrade*.parquet")))
+pq.write_table(out, ROOT / "data/sa_rhodium_exports_monthly.parquet")
 print(f"Target: {len(target):,} observations, {target.observation_date.min().date()} to {target.observation_date.max().date()}; two trade unit values restored.")

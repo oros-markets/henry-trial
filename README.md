@@ -1,6 +1,6 @@
 # Rhodium Research Trial
 
-Start with the [trial brief](TRIAL_README.md) for the research task, evaluation requirements, and deliverable.
+Start with the [trial brief](TRIAL.md) for the research task, evaluation requirements, and deliverable.
 
 - [Features catalog](FEATURES_CATALOG.md): available data, sources, and coverage.
 - [Data files](data/index.md): file locations.

@@ -1,7 +1,7 @@
 """Rebuild the additional research tables from the preserved user attachments.
 
 Run from any directory: uv run --extra data-import python scripts/import_trial_attachments.py
-The original eight bds_* datasets are never changed by this script.
+The separately supplied monthly and daily datasets are not changed by this script.
 """
 
 from pathlib import Path

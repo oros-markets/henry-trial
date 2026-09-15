@@ -19,7 +19,8 @@ def _():
 
 @app.cell
 def _(Path):
-    data_dir = Path.cwd().parent / "data"
+    root = Path.cwd()
+    data_dir = (root if (root / "data").is_dir() else root.parent) / "data"
     files = sorted(data_dir.glob("*.parquet"))
     files
     return data_dir, files

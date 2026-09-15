@@ -1,29 +1,34 @@
 # Features Catalog
 
-## Target
+## Target and related metal prices
 
-[Johnson Matthey New York daily rhodium](data/johnson_matthey_rhodium_daily.parquet): **16 September 1996–15 September 2026**, on quoted dates. Use `price_usd_per_lb` for prices and derive forward returns as described in the [trial brief](TRIAL_README.md). Original quotes are retained in `price_usd_per_troy_oz`. [Source: Johnson Matthey](https://matthey.com/en/products-and-markets/pgms-and-circularity/pgm-management).
+Use `rhodium_usd_per_troy_oz` in [jm_pgm_prices_daily.parquet](data/jm_pgm_prices_daily.parquet) as the target. The same table contains `platinum_usd_per_troy_oz`, `palladium_usd_per_troy_oz`, `iridium_usd_per_troy_oz`, and `ruthenium_usd_per_troy_oz`. Each row is one quoted date; all prices are Johnson Matthey New York quotes in **USD/troy oz**.
 
-The target preserves the source’s quoted dates without interpolation. Longer gaps occur in January 2003, January 2016, and January 2017; use observed prices when mapping forecast horizons.
+See [TRIAL.md](TRIAL.md) for the research task and evaluation requirements.
 
-## Candidate features
+## Available datasets
 
-Coverage shows the first and last available records; individual series may start later or contain gaps. Source records are preserved in [data/sources](data/sources/README.md) or the supplied Parquet metadata.
+Coverage lists the first and last observations. Individual series may start later or contain gaps. Original records and provenance are in [data/sources](data/sources/README.md) and the Parquet metadata.
 
-| Dataset | Frequency · coverage | What it measures | Source |
+| Dataset | Frequency | Coverage | Content and source |
 | --- | --- | --- | --- |
-| [PGM prices](data/bds_5529cd6bc41841d7b58fb69e90cd2546__pgm_price_history.parquet) | Daily · 2018-01–2026-09 | USD quotes for platinum, palladium, rhodium, ruthenium, and iridium; includes open, high, low, and close fields. | Supplied price-history feed |
-| [China vehicle production](data/bds_59f19703af7c45bab999c0ed86851136__chinadata_vehicle_production.parquet) | Monthly · 1995-02–2026-07 | Total motor vehicles produced in China. | ChinaData |
-| [China new-energy vehicle production](data/bds_06c4bc4f03a645bf951a92f8e59c3006__chinadata_ev_production.parquet) | Monthly · 2023-03–2026-07 | Output of vehicles classified by the source as new-energy vehicles. | ChinaData / NBS |
-| [South African mining](data/bds_68ec2edb578d4f93af8bc60fc0db9777__fred_zafprmito01ixobm_history.parquet) | Monthly · 1975-01–2023-10 | Total mining output index, 2015 = 100, without seasonal adjustment. | FRED / OECD |
-| [EU electric cars](data/bds_8a05db43d9ba4fe58ec076250a56f1f9__iea_evs_eu_cars_historical.parquet) | Annual · 2010–2025 | Electric-car sales, fleet size, and market shares by powertrain. | IEA |
-| [US vehicle sales](data/bds_92934197439c46fc9622dfc440cace8f__fred_altsales_history.parquet) | Monthly · 1976-01–2026-08 | Car and light-truck sales in millions, at a seasonally adjusted annual rate. | FRED / ALTSALES |
-| [South African rhodium exports](data/bds_fb39b19cbcc4464abc5ca4dbbdf4cf1f__un_comtrade_sa_refined_rhodium_monthly.parquet) | Monthly · 2010-01–2026-05 | Export value, shipment weight, and USD/kg unit value for unwrought or powdered rhodium. | UN Comtrade |
-| [Rand / dollar](data/bds_fed88706ea3046d4a66c7c7c7c71ef12__fred_dexsfus_history.parquet) | Weekdays · 1980-01–2026-09 | South African rand per US dollar; an increase means a weaker rand. | FRED / DEXSFUS |
-| [South African mining detail](data/sa_mining_production_sales_monthly.parquet) | Monthly · 1980-01–2026-07 | Production indices (2019 = 100) and sales in millions of rand by mineral, including PGMs. | Statistics South Africa / P2041 |
-| [Rhodium supply and demand](data/jm_rhodium_supply_demand_annual.parquet) | Annual · 1985–2026 | Regional primary supply, recycling, demand by industry, and surplus or deficit, in thousands of ounces. | Johnson Matthey, May 2026 |
-| [Platinum and palladium positions](data/cftc_pt_pd_open_interest.csv) | Weekly · 2006-06–2026-09 | Futures open interest and managed-money long and short positions, in contracts. | CFTC |
-| [Russia geopolitical risk](data/russia_geopolitical_risk_index.parquet) | Monthly · 1900-01–2026-08 | Share of newspaper articles about geopolitical risk involving Russia; recent measure starts in 1985. | GPR source workbook |
-| [China electric cars](data/iea_china_ev_sales.parquet) | Annual · 2010–2025 | Electric-car sales, fleet size, shares, battery deployment, electricity use, and estimated oil displacement. | IEA |
+| [Johnson Matthey PGM prices](data/jm_pgm_prices_daily.parquet) | Daily quotes | 1996-09-16 to 2026-09-15 | New York prices for rhodium, platinum, palladium, iridium, and ruthenium, all in USD/troy oz. Rhodium is the target. |
+| [Alternative PGM quotes](data/pgm_alternative_quotes_daily.parquet) | Daily | 2018-01-01 to 2026-09-10 | Separate USD quotes for the same five metals, with open, high, low, and close fields. Prices differ from JM; the source does not specify the weight unit. |
+| [China vehicle production](data/china_vehicle_production_monthly.parquet) | Monthly | 1995-02 to 2026-07 | Total motor vehicles produced in China. Source: ChinaData. |
+| [China new-energy vehicle production](data/china_new_energy_vehicle_production_monthly.parquet) | Monthly | 2023-03 to 2026-07 | Vehicles produced in the source’s new-energy category. Source: ChinaData / NBS. |
+| [South African total mining](data/sa_total_mining_production_monthly.parquet) | Monthly | 1975-01 to 2023-10 | Total mining output index, 2015 = 100, without seasonal adjustment. Source: FRED / OECD. |
+| [EU electric cars](data/eu_electric_cars_annual.parquet) | Annual | 2010 to 2025 | Electric-car sales, fleet size, and market shares by powertrain. Source: IEA. |
+| [US light vehicle sales](data/us_light_vehicle_sales_monthly.parquet) | Monthly | 1976-01 to 2026-08 | Car and light-truck sales in millions, at a seasonally adjusted annual rate. Source: FRED / ALTSALES. |
+| [South African rhodium exports](data/sa_rhodium_exports_monthly.parquet) | Monthly | 2010-01 to 2026-05 | Export value, shipment weight, and USD/kg unit value for unwrought or powdered rhodium. Source: UN Comtrade. |
+| [Rand / US dollar](data/usd_zar_exchange_rate_daily.parquet) | Weekdays | 1980-01-02 to 2026-09-11 | South African rand per US dollar; an increase means a weaker rand. Source: FRED / DEXSFUS. |
+| [South African mining detail](data/sa_mining_production_sales_monthly.parquet) | Monthly | 1980-01 to 2026-07 | Production indices (2019 = 100) and sales in millions of rand by mineral, including PGMs. Source: Statistics South Africa / P2041. |
+| [Rhodium supply and demand](data/jm_rhodium_supply_demand_annual.parquet) | Annual | 1985 to 2026 | Regional primary supply, recycling, demand by industry, and surplus or deficit, in thousands of ounces. Source: Johnson Matthey, May 2026. |
+| [Platinum and palladium positions](data/cftc_pt_pd_open_interest.csv) | Weekly | 2006-06-13 to 2026-09-08 | Futures open interest and managed-money long and short positions, in contracts. Source: CFTC. |
+| [Russia geopolitical risk](data/russia_geopolitical_risk_index.parquet) | Monthly | 1900-01 to 2026-08 | Share of newspaper articles about geopolitical risk involving Russia. The recent measure starts in 1985. Source: GPR workbook. |
+| [China electric cars](data/iea_china_ev_sales.parquet) | Annual | 2010 to 2025 | Electric-car sales, fleet size, shares, battery deployment, electricity use, and estimated oil displacement. Source: IEA. |
 
-**Usage notes:** Annual 2026 supply/demand figures are a May 2026 outlook. Keep battery-electric, plug-in hybrid, and fuel-cell vehicles separate. Trade unit values use net weight, with reported alternate kilogram quantities for July 2021 and February 2026 (`unit_value_weight_basis`). Account for publication timing and revisions when aligning features to forecasts.
+## Timing notes
+
+- JM quotes have longer gaps in January 2003, 2016, and 2017. They are not interpolated; use observed dates when mapping forecast horizons.
+- The 2026 annual supply/demand figures are a May 2026 outlook. Account for publication timing and revisions when aligning features to forecasts.
+- Export unit values use net weight, except July 2021 and February 2026, which use reported alternate kilogram quantities; `unit_value_weight_basis` identifies these rows.

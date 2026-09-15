@@ -1,10 +1,10 @@
 # Quantitative Research Work Trial: Rhodium Pricing
 
-Develop the strongest model you can for rhodium price returns, with corresponding price forecasts in US dollars per pound (USD/lb), using the supplied data as your starting point.
+Develop the strongest model you can for rhodium price returns, with corresponding price forecasts in US dollars per troy ounce (USD/troy oz), using the supplied data as your starting point.
 
-The target is the **Johnson Matthey New York daily rhodium Base Price**, using the supplied history from **16 September 1996 onward** in [johnson_matthey_rhodium_daily.parquet](data/johnson_matthey_rhodium_daily.parquet). Predict returns and report corresponding price forecasts in **USD per pound**.
+The target is the **Johnson Matthey New York daily rhodium Base Price**, using the supplied history from **16 September 1996 onward** in [jm_pgm_prices_daily.parquet](data/jm_pgm_prices_daily.parquet). Predict returns and report corresponding price forecasts in **USD/troy oz**.
 
-Use `price_usd_per_lb`. The file also retains the original USD-per-troy-ounce quote; the conversion to a standard avoirdupois pound is `7000 / 480`. Percentage returns are unchanged by this conversion.
+Use `rhodium_usd_per_troy_oz` as the target price. The same table provides daily platinum, palladium, iridium, and ruthenium prices as candidate features. All five series use the source’s USD/troy oz quotes without unit conversion.
 
 This is a deliberately open-ended research problem. You own the work from feature selection onward, including problem formulation, feature engineering, modeling, validation, and interpretation. Focus primarily on horizons of roughly 6–12 months. You may experiment with other horizons, but every prediction horizon must be at least 3 months. Define and justify your horizons, forecast frequency, and the information available at the time each prediction is made.
 
@@ -36,7 +36,7 @@ You may model log returns or price levels internally, but convert predictions to
 Report out-of-sample results separately for each horizon, including:
 
 - R² on rhodium price returns. State the definition and how results are aggregated across backtest folds.
-- MAE of the corresponding price forecasts in USD/lb.
+- MAE of the corresponding price forecasts in USD/troy oz.
 - RMSE of price forecasts, plus MAE and RMSE of returns. Label return errors clearly as decimal returns or percentage points.
 
 Explain which objective guided model selection and how you weighed competing metrics. Compare with a zero-return forecast, equivalent to predicting that the future price equals the most recently available price, and any other useful baselines. “Returns” here means changes in the price of rhodium; a trading strategy is not required.
