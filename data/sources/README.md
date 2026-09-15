@@ -36,3 +36,7 @@ Rebuild the target and restored trade values without network access:
 ```sh
 uv run python scripts/prepare_target.py
 ```
+
+## Heraeus Precious Metals prices
+
+[pgm_alternative_quotes_daily.parquet](../pgm_alternative_quotes_daily.parquet) contains Heraeus Precious Metals quotes for platinum, palladium, rhodium, iridium, and ruthenium. Heraeus and Johnson Matthey are separate dealers with different price discovery. The Heraeus dataset is retained for its additional open, high, low, and close (OHLC) fields, particularly for platinum and palladium. The recorded price-history endpoint is preserved in the Parquet metadata. Currency is recorded as USD; the weight unit is not specified in that metadata.

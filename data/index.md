@@ -5,7 +5,7 @@ See the [features catalog](../FEATURES_CATALOG.md) for coverage, frequency, and 
 | File | Dataset |
 | --- | --- |
 | [jm_pgm_prices_daily.parquet](jm_pgm_prices_daily.parquet) | Johnson Matthey PGM prices |
-| [pgm_alternative_quotes_daily.parquet](pgm_alternative_quotes_daily.parquet) | Alternative PGM quotes |
+| [pgm_alternative_quotes_daily.parquet](pgm_alternative_quotes_daily.parquet) | Heraeus Precious Metals PGM prices and OHLC |
 | [china_vehicle_production_monthly.parquet](china_vehicle_production_monthly.parquet) | China vehicle production |
 | [china_new_energy_vehicle_production_monthly.parquet](china_new_energy_vehicle_production_monthly.parquet) | China new-energy vehicle production |
 | [sa_total_mining_production_monthly.parquet](sa_total_mining_production_monthly.parquet) | South African total mining |

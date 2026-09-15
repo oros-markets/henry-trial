@@ -13,7 +13,7 @@ Coverage lists the first and last observations. Individual series may start late
 | Dataset | Frequency | Coverage | Content and source |
 | --- | --- | --- | --- |
 | [Johnson Matthey PGM prices](data/jm_pgm_prices_daily.parquet) | Daily quotes | 1996-09-16 to 2026-09-15 | New York prices for rhodium, platinum, palladium, iridium, and ruthenium, all in USD/troy oz. Rhodium is the target. |
-| [Alternative PGM quotes](data/pgm_alternative_quotes_daily.parquet) | Daily | 2018-01-01 to 2026-09-10 | Separate USD quotes for the same five metals, with open, high, low, and close fields. Prices differ from JM; the source does not specify the weight unit. |
+| [Heraeus PGM prices](data/pgm_alternative_quotes_daily.parquet) | Daily | 2018-01-01 to 2026-09-10 | Heraeus Precious Metals dealer quotes for the same five metals. Retained for additional open, high, low, and close (OHLC) data, particularly for platinum and palladium; dealer price discovery differs from Johnson Matthey. |
 | [China vehicle production](data/china_vehicle_production_monthly.parquet) | Monthly | 1995-02 to 2026-07 | Total motor vehicles produced in China. Source: ChinaData. |
 | [China new-energy vehicle production](data/china_new_energy_vehicle_production_monthly.parquet) | Monthly | 2023-03 to 2026-07 | Vehicles produced in the source’s new-energy category. Source: ChinaData / NBS. |
 | [South African total mining](data/sa_total_mining_production_monthly.parquet) | Monthly | 1975-01 to 2023-10 | Total mining output index, 2015 = 100, without seasonal adjustment. Source: FRED / OECD. |
