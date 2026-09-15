@@ -1,4 +1,4 @@
-"""Prepare the 1996-onward target and source-backed trade unit values offline."""
+"""Prepare the full New York target and source-backed trade unit values offline."""
 from pathlib import Path
 import json
 import pandas as pd
@@ -6,12 +6,12 @@ import pyarrow as pa
 import pyarrow.parquet as pq
 ROOT = Path(__file__).resolve().parents[1]
 SOURCES = ROOT / "data/sources"
-prices = pd.read_csv(SOURCES / "jm_rhodium_london_daily.csv", skiprows=1)
+prices = pd.read_csv(SOURCES / "jm_rhodium_new_york_daily.csv", skiprows=1)
 prices["observation_date"] = pd.to_datetime(prices.Date, format="%d-%b-%Y")
-prices = prices.loc[prices.observation_date.ge("1996-01-01")].sort_values("observation_date")
+prices = prices.sort_values("observation_date")
 target = prices[["observation_date", "Rhodium"]].rename(columns={"Rhodium": "price_usd_per_troy_oz"}).reset_index(drop=True)
 target["price_usd_per_lb"] = target.price_usd_per_troy_oz * (7000 / 480)
-target["quote_region"] = "London"
+target["quote_region"] = "New York"
 assert target.observation_date.is_unique and target.notna().all().all()
 assert target.price_usd_per_troy_oz.gt(0).all()
 target.to_parquet(ROOT / "data/johnson_matthey_rhodium_daily.parquet", index=False)

@@ -4,7 +4,7 @@ This directory contains the candidate feature data. See the [Features Catalog](.
 
 | File | Description |
 | --- | --- |
-| `johnson_matthey_rhodium_daily.parquet` | Target: Johnson Matthey London daily rhodium, January 1996 onward; USD/troy oz and USD/lb. |
+| `johnson_matthey_rhodium_daily.parquet` | Target: Johnson Matthey New York daily rhodium, 16 September 1996 onward; USD/troy oz and USD/lb. |
 | `bds_06c4bc4f03a645bf951a92f8e59c3006__chinadata_ev_production.parquet` | Monthly China new-energy-vehicle production. |
 | `bds_5529cd6bc41841d7b58fb69e90cd2546__pgm_price_history.parquet` | Daily platinum-group-metal prices. |
 | `bds_59f19703af7c45bab999c0ed86851136__chinadata_vehicle_production.parquet` | Monthly China vehicle production. |

@@ -1,11 +1,9 @@
 {
   "retrieved_date": "2026-09-15",
   "publisher": "Johnson Matthey",
-  "region": "London",
+  "region": "New York",
   "source_page": "https://matthey.com/en/products-and-markets/pgms-and-circularity/pgm-management",
-  "download_url": "https://matthey.com/documents/161599/8673622/DAILY_PGM_Prices_London_9_15_2026.csv/f468b6a6-3b53-c6db-e51f-533b16d5619d",
-  "raw_start": "1992-07-01",
-  "trial_start_filter": "1996-01-01",
+  "raw_start": "1996-09-16",
   "raw_unit": "USD/troy ounce",
   "usd_per_lb_multiplier": "7000/480",
   "comtrade_endpoint": "https://comtradeapi.un.org/public/v1/preview/C/M/HS",
@@ -19,5 +17,11 @@
     "motCode": 0,
     "maxRecords": 500
   },
-  "quantity_units_reference": "https://uncomtrade.org/docs/supplementary-quantity-units/"
+  "quantity_units_reference": "https://uncomtrade.org/docs/supplementary-quantity-units/",
+  "raw_end": "2026-09-15",
+  "original_filename": "DAILY_PGM_Prices_New York_9_15_2026.csv",
+  "source_file": "jm_rhodium_new_york_daily.csv",
+  "sha256": "42746e48e80953a5a9fb240f0f0c0acee6eb528bc1ec16e5a50d17eae3546af7",
+  "acquisition": "User-downloaded Johnson Matthey website export",
+  "target_selection": "All Rhodium observations; no date filtering or interpolation"
 }

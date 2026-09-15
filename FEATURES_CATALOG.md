@@ -2,7 +2,9 @@
 
 ## Target
 
-[Johnson Matthey London daily rhodium](data/johnson_matthey_rhodium_daily.parquet): **January 1996–September 2026**, on quoted dates. Use `price_usd_per_lb` for prices and derive forward returns as described in the [trial brief](TRIAL_README.md). Original quotes are retained in `price_usd_per_troy_oz`. [Source: Johnson Matthey](https://matthey.com/en/products-and-markets/pgms-and-circularity/pgm-management).
+[Johnson Matthey New York daily rhodium](data/johnson_matthey_rhodium_daily.parquet): **16 September 1996–15 September 2026**, on quoted dates. Use `price_usd_per_lb` for prices and derive forward returns as described in the [trial brief](TRIAL_README.md). Original quotes are retained in `price_usd_per_troy_oz`. [Source: Johnson Matthey](https://matthey.com/en/products-and-markets/pgms-and-circularity/pgm-management).
+
+The target preserves the source’s quoted dates without interpolation. Longer gaps occur in January 2003, January 2016, and January 2017; use observed prices when mapping forecast horizons.
 
 ## Candidate features
 

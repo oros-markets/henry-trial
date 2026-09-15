@@ -27,7 +27,7 @@ See the [Features Catalog](../../FEATURES_CATALOG.md) for dataset descriptions.
 
 ## Daily rhodium target and trade records
 
-`jm_rhodium_london_daily.csv` is the unmodified Johnson Matthey London export retrieved on 15 September 2026. It contains observations from July 1992; the trial target selects January 1996 onward. Prices are USD per troy ounce. See [source provenance](target_provenance.json).
+`jm_rhodium_new_york_daily.csv` is the unmodified Johnson Matthey New York export downloaded on 15 September 2026. It contains five metals; the target selects every rhodium observation, from 16 September 1996 to 15 September 2026. Prices are USD per troy ounce. No start-date filter or interpolation is applied. See [source provenance](target_provenance.json).
 
 `un_comtrade_original.parquet` preserves the supplied trade data before restoring two unit values. `comtrade_202107.json` and `comtrade_202602.json` contain the source responses with alternate quantities in kilograms (unit code 8). The original net weights remain unchanged. `comtrade_202012.json` records an empty response for December 2020.
 

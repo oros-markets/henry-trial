@@ -2,7 +2,7 @@
 
 Develop the strongest model you can for rhodium price returns, with corresponding price forecasts in US dollars per pound (USD/lb), using the supplied data as your starting point.
 
-The target is the **Johnson Matthey London daily rhodium Base Price**, using the supplied history from **January 1996 onward** in [johnson_matthey_rhodium_daily.parquet](data/johnson_matthey_rhodium_daily.parquet). Predict returns and report corresponding price forecasts in **USD per pound**.
+The target is the **Johnson Matthey New York daily rhodium Base Price**, using the supplied history from **16 September 1996 onward** in [johnson_matthey_rhodium_daily.parquet](data/johnson_matthey_rhodium_daily.parquet). Predict returns and report corresponding price forecasts in **USD per pound**.
 
 Use `price_usd_per_lb`. The file also retains the original USD-per-troy-ounce quote; the conversion to a standard avoirdupois pound is `7000 / 480`. Percentage returns are unchanged by this conversion.
 
